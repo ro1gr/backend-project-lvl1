@@ -6,5 +6,6 @@ jobs:
   eslint:
     runs-on: ubuntu-latest
     steps:
-      - name: make lint
+      - name: eslint
         run: make lint
+        working-directory: ../..
