@@ -1,2 +1,3 @@
 #!/usr/bin/env node
-import * as gameStart from '../src/cli.js';
+import '../src/cli.js';
+console.log(5);
