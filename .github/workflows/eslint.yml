@@ -9,4 +9,3 @@ jobs:
       - uses: actions/checkout@master
       - name: Make Lint
         run: make lint
-        working-directory: /
