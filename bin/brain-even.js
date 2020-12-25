@@ -1,7 +1,9 @@
-import readlineSync from 'readline-sync';
-import { name } from '../src/cli.js'
+#!/usr/bin/env node
 
-export default () => {
+import readlineSync from 'readline-sync';
+import {name} from './greetings.js';
+
+export const brainEven = () => {
   const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
   const randomNumber = () => Math.ceil(Math.random() * 13);
 
@@ -32,3 +34,5 @@ export default () => {
     console.log(`Congratulations, ${name}!`);
   }
 };
+
+brainEven();

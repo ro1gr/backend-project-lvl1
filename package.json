@@ -1,5 +1,5 @@
 {
-  "name": "@hexlet/code",
+  "name": "brain-games",
   "version": "1.0.0",
   "type": "module",
   "description": "first project at Hexlet",
@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "bin": {
-    "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js"
+    "brain-games": "./bin/brain-games.js",
+    "brain-even": "./bin/brain-even.js"
   },
   "dependencies": {
     "readline-sync": "^1.4.10"
