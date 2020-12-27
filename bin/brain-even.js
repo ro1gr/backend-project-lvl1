@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-
 import readlineSync from 'readline-sync';
-import { name } from './greetings.js';
+import { name } from '../src/cli.js';
 
 export const brainEven = () => {
   const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
