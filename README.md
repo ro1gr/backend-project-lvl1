@@ -5,6 +5,10 @@
 
 ![ESLint](https://github.com/ro1gr/backend-project-lvl1/workflows/ESLint/badge.svg)
 
-## Asciinema
+### Brain Even
 
 [![asciicast](https://asciinema.org/a/ph0lqg7WhyB2cjtO0ljfa4wLg.svg)](https://asciinema.org/a/ph0lqg7WhyB2cjtO0ljfa4wLg)
+
+### Brain Calc
+
+[![asciicast](https://asciinema.org/a/dhSfuS8BemNB79gjDbIETa6gu.svg)](https://asciinema.org/a/dhSfuS8BemNB79gjDbIETa6gu)
