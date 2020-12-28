@@ -23,7 +23,7 @@ export const brainGcd = () => {
         if (biggest % smallest === 0) {
           return smallest;
         }
-        return innerFunc(biggest, biggest % smallest);
+        return innerFunc(smallest, biggest % smallest);
       };
       return String(innerFunc(biggest, smallest));
     };
