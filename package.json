@@ -18,7 +18,8 @@
     "brain-progression": "./bin/brain-progression.js"
   },
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "string-math": "^1.2.2"
   },
   "devDependencies": {
     "eslint": "^7.16.0",
