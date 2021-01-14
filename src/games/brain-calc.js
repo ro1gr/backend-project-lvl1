@@ -1,32 +1,29 @@
 import launcher from '../index.js';
-import generateNumber from '../generate-number.js';
+import generateRandomNumber from '../generate-random-number.js';
 
-const rules = 'What is the result of the expression?';
-const number1 = () => generateNumber(1, 100);
-const number2 = () => generateNumber(1, 100);
-const operators = ['+', '-', '*'];
-const randomOperator = () => operators[generateNumber(0, operators.length)];
-const question = () => `${number1()} ${randomOperator()} ${number2()}`;
+const gameDescription = 'What is the result of the expression?';
 
-const brainCalc = (operation) => {
-  const arr = operation.split(' ');
-  const n1 = Number(arr[0]);
-  const n2 = Number(arr[2]);
-  const operator = arr[1];
-
-  let expression = n1;
+const calculate = (n1, n2, operator) => {
   switch (operator) {
-    case '+':
-      expression = n1 + n2;
-      break;
     case '-':
-      expression = n1 - n2;
-      break;
+      return n1 - n2;
+    case '*':
+      return n1 * n2;
     default:
-      expression = n1 * n2;
+      return n1 + n2;
   }
-
-  return expression;
 };
 
-export default () => launcher(brainCalc, rules, question);
+const generateQuestionAndAnswer = () => {
+  const number1 = generateRandomNumber(1, 20);
+  const number2 = generateRandomNumber(1, 20);
+  const operators = ['+', '-', '*'];
+  const operator = operators[generateRandomNumber(0, operators.length)];
+
+  const question = `${number1} ${operator} ${number2}`;
+  const answer = calculate(number1, number2, operator);
+
+  return [question, answer];
+};
+
+export default () => launcher(gameDescription, generateQuestionAndAnswer);

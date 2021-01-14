@@ -1,26 +1,29 @@
 import launcher from '../index.js';
-import generateNumber from '../generate-number.js';
+import generateRandomNumber from '../generate-random-number.js';
 
-const rules = 'Find the greatest common divisor of given numbers.';
-const number1 = () => generateNumber(1, 100);
-const number2 = () => generateNumber(1, 100);
-const question = () => `${number1()} ${number2()}`;
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 
-const brainGcd = (curQuestion) => {
-  const arr = curQuestion.split(' ');
-  const n1 = arr[0];
-  const n2 = arr[1];
+const findGcd = (n1, n2) => {
   const greatest = n1 > n2 ? n1 : n2;
   const least = n1 > n2 ? n2 : n1;
 
-  const getGcd = (big, small) => {
+  const inner = (big, small) => {
     if (big % small === 0) {
       return small;
     }
-    return getGcd(small, big % small);
+    return inner(small, big % small);
   };
 
-  return getGcd(greatest, least);
+  return inner(greatest, least);
 };
 
-export default () => launcher(brainGcd, rules, question);
+const generateQuestionAndAnswer = () => {
+  const number1 = generateRandomNumber(1, 20);
+  const number2 = generateRandomNumber(1, 20);
+  const question = `${number1} ${number2}`;
+  const answer = findGcd(number1, number2);
+
+  return [question, answer];
+};
+
+export default () => launcher(gameDescription, generateQuestionAndAnswer);
