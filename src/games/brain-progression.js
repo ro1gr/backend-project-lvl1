@@ -16,8 +16,9 @@ const generateQuestionAndAnswer = () => {
   progression[indexOfHiddenEl] = '..';
 
   const question = progression.join(' ');
+  const answer = String(hiddenEl);
 
-  return [question, hiddenEl];
+  return [question, answer];
 };
 
 export default () => launcher(gameDescription, generateQuestionAndAnswer);

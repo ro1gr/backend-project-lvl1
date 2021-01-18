@@ -10,7 +10,8 @@ const printYesIfIsEven = (number) => {
 
 const generateQuestionAndAnswer = () => {
   const number = generateRandomNumber(0, 100);
-  const answer = printYesIfIsEven(number);
+  const result = printYesIfIsEven(number);
+  const answer = String(result);
 
   return [number, answer];
 };

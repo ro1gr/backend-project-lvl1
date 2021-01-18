@@ -21,7 +21,8 @@ const printYesIfIsPrime = (number) => {
 
 const generateQuestionAndAnswer = () => {
   const number = generateRandomNumber(0, 100);
-  const answer = printYesIfIsPrime(number);
+  const result = printYesIfIsPrime(number);
+  const answer = String(result);
 
   return [number, answer];
 };

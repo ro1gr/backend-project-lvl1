@@ -21,7 +21,8 @@ const generateQuestionAndAnswer = () => {
   const number1 = generateRandomNumber(1, 20);
   const number2 = generateRandomNumber(1, 20);
   const question = `${number1} ${number2}`;
-  const answer = findGcd(number1, number2);
+  const result = findGcd(number1, number2);
+  const answer = String(result);
 
   return [question, answer];
 };
