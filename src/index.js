@@ -9,7 +9,7 @@ export default (gameDescription, generateRound) => {
 
   console.log(gameDescription);
 
-  for (let i = 0; i < roundQuantity; i += 1) {
+  for (let i = 0; i < roundQuantity; i++) {
     const [question, correctAnswer] = generateRound();
     console.log(`Question: ${question}`);
 
