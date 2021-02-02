@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "type": "module",
   "description": "first project at Hexlet",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Roman Grigoryan",
   "license": "ISC",
   "bin": {
     "brain-calc": "./bin/brain-calc.js",
@@ -18,8 +17,7 @@
     "brain-progression": "./bin/brain-progression.js"
   },
   "dependencies": {
-    "readline-sync": "^1.4.10",
-    "string-math": "^1.2.2"
+    "readline-sync": "^1.4.10"
   },
   "devDependencies": {
     "eslint": "^7.16.0",
