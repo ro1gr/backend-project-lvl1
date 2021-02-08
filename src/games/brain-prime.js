@@ -14,12 +14,11 @@ const isPrime = (n) => {
   }
   return true;
 };
-const printYesIfIsPrime = (n) => (isPrime(n) ? 'yes' : 'no');
 
 const generateRound = () => {
   const number = generateRandomNumber(0, 100);
   const question = String(number);
-  const answer = printYesIfIsPrime(number);
+  const answer = isPrime(number) ? 'yes' : 'no';
 
   return [question, answer];
 };
