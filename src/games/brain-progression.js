@@ -3,13 +3,13 @@ import generateRandomNumber from '../generate-random-number.js';
 
 const gameDescription = 'What number is missing in the progression?';
 
-const generateQuestion = (firstEl, length, step, indexOfHiddenEl) => {
+const generateQuestion = (firstElement, length, step, indexOfHiddenElement) => {
   const progression = [];
   for (let i = 0; i < length; i += 1) {
-    if (i === indexOfHiddenEl) {
+    if (i === indexOfHiddenElement) {
       progression[i] = '..';
     } else {
-      progression[i] = firstEl + i * step;
+      progression[i] = firstElement + i * step;
     }
   }
 
@@ -17,14 +17,14 @@ const generateQuestion = (firstEl, length, step, indexOfHiddenEl) => {
 };
 
 const generateRound = () => {
-  const firstEl = generateRandomNumber(1, 10);
+  const firstElement = generateRandomNumber(1, 10);
   const length = generateRandomNumber(5, 10);
   const step = generateRandomNumber(1, 5);
-  const indexOfHiddenEl = generateRandomNumber(0, length - 1);
+  const indexOfHiddenElement = generateRandomNumber(0, length - 1);
 
-  const question = generateQuestion(firstEl, length, step, indexOfHiddenEl);
-  const hiddenEl = firstEl + indexOfHiddenEl * step;
-  const answer = String(hiddenEl);
+  const question = generateQuestion(firstElement, length, step, indexOfHiddenElement);
+  const hiddenElement = firstElement + indexOfHiddenElement * step;
+  const answer = String(hiddenElement);
 
   return [question, answer];
 };
