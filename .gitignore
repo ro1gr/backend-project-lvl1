@@ -1,6 +1,5 @@
-# ignore generated html files,
 node_modules/
 .DS_Store
 .log
-.sublime-project
-.sublime-workspace
+*.sublime-project
+*.sublime-workspace
